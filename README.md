@@ -22,3 +22,15 @@ Example usage within grunt init:
         }
     }
 ```
+
+Original:
+
+```php
+define('ENV', 'blah');
+```
+
+Result:
+
+```php
+define('ENV', 'staging');
+```
