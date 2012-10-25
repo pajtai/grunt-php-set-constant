@@ -3,7 +3,9 @@ grunt-set-constant
 
 Set a constant in a php file to the value indicated.
 
-The file that will be altered will be in `grunt.config.project.dirs.temp`.
+The file that will be altered will be in `grunt.config.project.dirs.temp`. This is so that you don't screw up your
+source code. Suggested use in in conjunstion with [grunt-cp](https://npmjs.org/package/grunt-cp). First copy your
+files to `grunt.config.project.dirs.temp`, then run `setConstant`.
 
 Example usage within grunt init:
 
