@@ -11,11 +11,17 @@ supported.
 Example usage within grunt init:
 
 ```javascript
+    project: {
+        dirs: {
+            temp: 'temporaryDirectory/'
+        }
+    },
+
     setConstant: {
         stage: {
             constant    : 'ENV',
             value       : 'staging',
-            file        : 'temp/myfile.php'
+            file        : 'sample/myfile.php'
         }
     }
 ```
