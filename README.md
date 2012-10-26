@@ -43,3 +43,5 @@ grunt.loadNpmTasks('grunt-php-set-constant');
 * TODO:
     * support constants other than strings
     * implement tests
+
+_[NPM package](https://npmjs.org/package/grunt-php-set-constant)_
