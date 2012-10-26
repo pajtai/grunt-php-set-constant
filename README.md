@@ -32,6 +32,14 @@ to
 define('ENV', 'staging');
 ```
 
+To use this package put it as a dependency in your `package.json`, and then run `npm install`.
+
+Then load the grunt task in your `grunt.js`
+
+```javascript
+grunt.loadNpmTasks('grunt-php-set-constant');
+```
+
 * TODO:
     * support constants other than strings
     * implement tests
