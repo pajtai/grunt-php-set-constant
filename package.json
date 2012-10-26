@@ -2,7 +2,7 @@
   "name": "grunt-php-set-constant",
   "title": "grunt PHP set constant",
   "description": "Set PHP constants to a defined values in PHP files.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/pajtai/grunt-php-set-constant",
   "author": "Peter Ajtai (https://netlumination.com)",
   "repository": {

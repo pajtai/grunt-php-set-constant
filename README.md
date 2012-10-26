@@ -1,5 +1,5 @@
-grunt-set-constant
-==================
+grunt-php-set-constant
+======================
 
 Set a constant in a php file to the value indicated.
 
@@ -32,6 +32,18 @@ to
 define('ENV', 'staging');
 ```
 
+To use this package put it as a dependency in your `package.json`, and then run `npm install`.
+
+Then load the grunt task in your `grunt.js`
+
+```javascript
+grunt.loadNpmTasks('grunt-php-set-constant');
+```
+
 * TODO:
     * support constants other than strings
     * implement tests
+
+---
+
+[NPM package](https://npmjs.org/package/grunt-php-set-constant)
