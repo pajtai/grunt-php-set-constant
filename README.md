@@ -1,5 +1,5 @@
-grunt-set-constant
-==================
+grunt-php-set-constant
+======================
 
 Set a constant in a php file to the value indicated.
 
