@@ -21,7 +21,7 @@
   },
   "devDependencies": {
       "jasmine-node": "*",
-      "grunt": "*",
+      "grunt": ">= 0.3.8",
       "grunt-cp": ">=0.1.0"
   },
   "keywords": [
