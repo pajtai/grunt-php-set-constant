@@ -22,9 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": ">= 0.3.8",
-    "jasmine-node": ">= 1.0.26"
-
+      "grunt-cp": ">=0.1.0"
   },
   "keywords": [
     "gruntplugin"
