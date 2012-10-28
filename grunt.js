@@ -7,8 +7,8 @@ module.exports = function (grunt) {
 
         cp: {
             test: {
-               src  : 'test/sampleInput.php',
-               dest : 'test/sampleOutput.php'
+               src  : 'test/input',
+               dest : 'test/output'
             }
         },
 
@@ -16,12 +16,14 @@ module.exports = function (grunt) {
             test: {
                 constant: 'TEST',
                 value: 'new result',
-                file: 'test/sampleOutput.php'
+                file: 'test/output/sample.php'
             }
         }
     };
 
     grunt.initConfig(gruntConfig);
+
+    grunt.loadNpmTasks('grunt-cp');
 
     grunt.loadTasks('./tasks');
 

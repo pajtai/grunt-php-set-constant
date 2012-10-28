@@ -17,21 +17,18 @@
   "engines": {
     "node": "*"
   },
-  "scripts": {
-    "test": "grunt test"
-  },
   "dependencies": {},
   "devDependencies": {
+      "grunt": ">= 0.3.8",
       "grunt-cp": ">=0.1.0"
   },
   "keywords": [
     "gruntplugin"
   ],
   "directories": {
-    "example": "example",
     "test": "test"
   },
   "scripts": {
-      "test": "jasmine-node test --verbose --coffee"
+      "test": "grunt test && jasmine-node test --verbose --coffee"
   }
 }
