@@ -22,7 +22,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": ">= 0.3.8"
+    "grunt": ">= 0.3.8",
+    "jasmine-node": ">= 1.0.26"
+
   },
   "keywords": [
     "gruntplugin"
@@ -30,5 +32,8 @@
   "directories": {
     "example": "example",
     "test": "test"
+  },
+  "scripts": {
+      "test": "jasmine-node test --verbose --coffee"
   }
 }
