@@ -4,11 +4,19 @@ module.exports = function (grunt) {
     'use strict';
 
     var gruntConfig = {
+
+        cp: {
+            test: {
+               src  : 'test/sampleInput.php',
+               dest : 'test/sampleOutput.php'
+            }
+        },
+
         setPHPConstant: {
-            test1: {
-                constant: 'TEST1',
+            test: {
+                constant: 'TEST',
                 value: 'new result',
-                file: 'example/sample.php'
+                file: 'test/sampleOutput.php'
             }
         }
     };
@@ -17,5 +25,5 @@ module.exports = function (grunt) {
 
     grunt.loadTasks('./tasks');
 
-    grunt.registerTask('default', 'setPHPConstant');
+    grunt.registerTask('test', 'cp setPHPConstant');
 };
