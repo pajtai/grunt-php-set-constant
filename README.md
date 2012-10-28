@@ -1,10 +1,8 @@
 grunt-php-set-constant
 ======================
-<<<<<<< HEAD
 
 ### Description
-=======
->>>>>>> 340ee7c7cf11c92d6e5ff5af3185d2e49abcb4e0
+
 
 Set a constant in a php file to the value indicated.
 
@@ -37,11 +35,8 @@ to
 define('ENV', 'staging');
 ```
 
-<<<<<<< HEAD
 ### Installation and Use
 
-=======
->>>>>>> 340ee7c7cf11c92d6e5ff5af3185d2e49abcb4e0
 To use this package put it as a dependency in your `package.json`, and then run `npm install`.
 
 Then load the grunt task in your `grunt.js`
@@ -50,7 +45,6 @@ Then load the grunt task in your `grunt.js`
 grunt.loadNpmTasks('grunt-php-set-constant');
 ```
 
-<<<<<<< HEAD
 ### Tests
 
 Tests can be run by cloning this repo and running `npm install && npm test` or by installing the npm module in your
@@ -79,11 +73,6 @@ npm test
 * TODO:
     * support quote mark escaping and constants with quote marks in them
     * support consants other than strings
-=======
-* TODO:
-    * support constants other than strings
-    * implement tests
->>>>>>> 340ee7c7cf11c92d6e5ff5af3185d2e49abcb4e0
 
 ---
 
