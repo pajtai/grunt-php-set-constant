@@ -47,28 +47,15 @@ grunt.loadNpmTasks('grunt-php-set-constant');
 
 ## Tests
 
-Tests can be run by cloning this repo and running `npm install && npm test` or by installing the npm module in your
-project and running the tests from there.
-
-To run the tests from your project that uses this module
-
-First install the module as described above with `package.json` and `nmp install`
-
-Then
+Tests can be run from the `grunt-php-set-constant` directory using:
 
 ```bash
-# go to the directory of this module in node_modules of your project
-cd [your project]/node_module/grunt-set-php-constant
-
-# now install the dev dependencies needed for running the test
 npm install
-
-# and finally run the tests
 npm test
-
-# you can inspect the sample output which will be in test/output
-# the input is in test/input
 ```
+
+You can inspect the sample output created. The tests can be run by either cloning the git repo or from this modules
+directory inside the `node_modules` folder of your project.
 
 * TODO:
     * support quote mark escaping and constants with quote marks in them

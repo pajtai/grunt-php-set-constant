@@ -24,6 +24,7 @@ module.exports = function (grunt) {
     grunt.initConfig(gruntConfig);
 
     grunt.loadNpmTasks('grunt-cp');
+    grunt.loadNpmTasks('grunt-bump');
 
     grunt.loadTasks('./tasks');
 
