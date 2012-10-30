@@ -1,19 +1,5 @@
 grunt = require('grunt')
-path  = require('path')
 fs    = require('fs')
-
-# todo: require this from grunt.js
-gruntConfig =
-  cp:
-    test:
-      src  : 'test/input'
-      dest : 'test/output'
-
-  setPHPConstant:
-    test:
-      constant: 'TEST'
-      value: 'new result'
-      file: 'test/output/sample.php'
 
 # expected output from the test
 output = [
@@ -25,7 +11,7 @@ output = [
 describe "The setting of PHP constants", ->
 
   it "updates the constant to 'original value'", ->
-    path      = gruntConfig.setPHPConstant.test.file
+    path      = 'test/output/sample.php'
     contents  = grunt.file.read(path)
     linesTested = 0
 
