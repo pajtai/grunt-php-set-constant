@@ -15,24 +15,12 @@ gruntConfig =
       value: 'new result'
       file: 'test/output/sample.php'
 
-# In Nodejs 0.8.0, existsSync moved from path -> fs.
-existsSync = fs.existsSync || path.existsSync;
-
-# Badass internal grunt lib.
-findup = require('../node_modules/grunt/lib/util/findup');
-
-# Where might a locally-installed grunt live?
-dir = path.resolve(findup(process.cwd(), 'grunt.js'), '../node_modules/grunt');
-
-# If grunt is installed locally, use it. Otherwise use this grunt.
-dir = '../node_modules/lib/grunt' if (!existsSync(dir))
-
+# expected output from the test
 output = [
   "define('TEST', 'new result');",
   "define(\"TEST\", 'new result');",
   "define ('TEST',\"new result\");"
 ]
-
 
 describe "The setting of PHP constants", ->
 
