@@ -3,13 +3,14 @@ grunt-php-set-constant
 
 ## Description
 
-
 Set a constant in a php file to the value indicated.
 
 This is a multi task.
 
 This supports single or double quotes. Heredoc and nowdoc within the `define` are not supported. String constants are
 supported.
+
+## Usage
 
 Example usage within grunt init:
 
@@ -54,7 +55,7 @@ npm install
 npm test
 ```
 
-You can inspect the sample output created. The tests can be run by either cloning the git repo or from this modules
+You can inspect the sample output created. The tests can be run by either cloning the git repo or from this module's
 directory inside the `node_modules` folder of your project.
 
 * TODO:

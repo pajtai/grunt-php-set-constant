@@ -7,8 +7,8 @@ module.exports = function (grunt) {
 
         cp: {
             test: {
-               src  : 'test/input',
-               dest : 'test/output'
+                src  : 'test/input',
+                dest : 'test/output'
             }
         },
 
