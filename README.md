@@ -8,7 +8,8 @@ Set a constant in a php file to the value indicated.
 This is a multi task.
 
 This supports single or double quotes. Heredoc and nowdoc within the `define` are not supported. String constants are
-supported.
+supported as are numbers, constants, and booleans. The quote marks will be maintained. So you can add quotes to
+transform from and initial number to a string. But, currently, you cannot transform a string to a number, etc.
 
 ## Usage
 
@@ -58,9 +59,14 @@ npm test
 You can inspect the sample output created. The tests can be run by either cloning the git repo or from this module's
 directory inside the `node_modules` folder of your project.
 
-* TODO:
-    * support quote mark escaping and constants with quote marks in them
-    * support consants other than strings
+## Contributors
+
+* [Peter Ajtai](https://github.com/pajtai)
+* [Eric Beringer](https://github.com/serialworm)
+
+### TODO:
+
+* use regex back references for quotes
 
 ---
 
