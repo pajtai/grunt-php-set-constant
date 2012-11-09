@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
             // we want to match "define('CONST', 'blah');" with any whitespace and any quote type
             // note that heredoc and now doc are NOT covered
-            var envRegex = new RegExp("(define\\s*\\(\\s*['\"]" + constant + "['\"]\\s*,\\s*['\"])[^'\"]+(['\"]\\s*\\)\\s*;)"),
+            var envRegex = new RegExp("(define\\s*\\(\\s*['\"]" + constant + "['\"]\\s*,\\s*['\"]?)[^'\"]+(['\"]?\\s*\\)\\s*;)"),
                 lines = body.replace(/\r\n/g, '\n').split(/\n/),
                 output = [];
 

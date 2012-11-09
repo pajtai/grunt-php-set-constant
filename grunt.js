@@ -17,7 +17,17 @@ module.exports = function (grunt) {
                 constant: 'TEST',
                 value: 'new result',
                 file: 'test/output/sample.php'
-            }
+            },
+            test2: {
+                constant: 'TEST2',
+                value: 67890,
+                file: 'test/output/sample.php'
+            },
+            test3: {
+                constant: 'TEST3',
+                value: 'new_constant_value',
+                file: 'test/output/sample.php'
+            }
         }
     };
 
