@@ -18,19 +18,19 @@ define('TEST',"original value");  // (String) Right double quotes, no space afte
 define('TEST', "original value"); // (String) Right double quotes, space after comma
 define ('TEST',"original value"); // (String) Space after define, right double quotes, no space after comma
 define ('TEST', "original value");// (String) Space after define, right double quotes, space after comma
-define('TEST',12345);             // (Number) Left single quotes, no space after comma
-define('TEST', 12345);            // (Number) Left single quotes, space after comma
-define ('TEST',12345);            // (Number) Space after define, left single quotes, no space after comma
-define ('TEST', 12345);           // (Number) Space after define, left single quotes, space after comma
-define("TEST",12345);             // (Number) Left double quotes, no space after comma
-define("TEST", 12345);            // (Number) Left double quotes, space after comma
-define ("TEST",12345);            // (Number) Space after define, left double quotes, no space after comma
-define ("TEST", 12345);           // (Number) Space after define, left double quotes, space after comma
-define('TEST',constant_value);    // (Constant) Left single quotes, no space after comma
-define('TEST', constant_value);   // (Constant) Left single quotes, space after comma
-define ('TEST',constant_value);   // (Constant) Space after define, left single quotes, no space after comma
-define ('TEST', constant_value);  // (Constant) Space after define, left single quotes, space after comma
-define("TEST",constant_value);    // (Constant) Left double quotes, no space after comma
-define("TEST", constant_value);   // (Constant) Left double quotes, space after comma
-define ("TEST",constant_value);   // (Constant) Space afer define, left double quotes, no space after comma
-define ("TEST", constant_value);  // (Constant) Space after define, left double quotes, space after comma
+define('TEST2',12345);            // (Number) Left single quotes, no space after comma
+define('TEST2', 12345);           // (Number) Left single quotes, space after comma
+define ('TEST2',12345);           // (Number) Space after define, left single quotes, no space after comma
+define ('TEST2', 12345);          // (Number) Space after define, left single quotes, space after comma
+define("TEST2",12345);            // (Number) Left double quotes, no space after comma
+define("TEST2", 12345);           // (Number) Left double quotes, space after comma
+define ("TEST2",12345);           // (Number) Space after define, left double quotes, no space after comma
+define ("TEST2", 12345);          // (Number) Space after define, left double quotes, space after comma
+define('TEST3',constant_value);   // (Constant) Left single quotes, no space after comma
+define('TEST3', constant_value);  // (Constant) Left single quotes, space after comma
+define ('TEST3',constant_value);  // (Constant) Space after define, left single quotes, no space after comma
+define ('TEST3', constant_value); // (Constant) Space after define, left single quotes, space after comma
+define("TEST3",constant_value);   // (Constant) Left double quotes, no space after comma
+define("TEST3", constant_value);  // (Constant) Left double quotes, space after comma
+define ("TEST3",constant_value);  // (Constant) Space afer define, left double quotes, no space after comma
+define ("TEST3", constant_value); // (Constant) Space after define, left double quotes, space after comma
