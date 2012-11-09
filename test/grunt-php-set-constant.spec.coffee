@@ -3,9 +3,38 @@ fs    = require('fs')
 
 # expected output from the test
 output = [
+  "define('TEST','new result');",
   "define('TEST', 'new result');",
+  "define ('TEST','new result');",
+  "define ('TEST', 'new result');",
+  "define(\"TEST\",\"new result\");",
+  "define(\"TEST\", \"new result\");",
+  "define (\"TEST\",\"new result\");",
+  "define (\"TEST\", \"new result\");",
+  "define(\"TEST\",'new result');",
   "define(\"TEST\", 'new result');",
-  "define ('TEST',\"new result\");"
+  "define (\"TEST\",'new result');",
+  "define (\"TEST\", 'new result');",
+  "define('TEST',\"new result\");",
+  "define('TEST', \"new result\");",
+  "define ('TEST',\"new result\");",
+  "define ('TEST', \"new result\");",
+  "define('TEST2',67890);",
+  "define('TEST2', 67890);",
+  "define ('TEST2',67890);",
+  "define ('TEST2', 67890);",
+  "define(\"TEST2\",67890);",
+  "define(\"TEST2\", 67890);",
+  "define (\"TEST2\",67890);",
+  "define (\"TEST2\", 67890);",
+  "define('TEST3',new_constant_value);",
+  "define('TEST3', new_constant_value);",
+  "define ('TEST3',new_constant_value);",
+  "define ('TEST3', new_constant_value);",
+  "define(\"TEST3\",new_constant_value);",
+  "define(\"TEST3\", new_constant_value);",
+  "define (\"TEST3\",new_constant_value);",
+  "define (\"TEST3\", new_constant_value);"
 ]
 
 describe "The setting of PHP constants", ->
