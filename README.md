@@ -60,7 +60,6 @@ directory inside the `node_modules` folder of your project.
 
 * TODO:
     * support quote mark escaping and constants with quote marks in them
-    * support consants other than strings
 
 ---
 
