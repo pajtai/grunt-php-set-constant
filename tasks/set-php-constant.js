@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 
         grunt.log.writeln("Searching in file: " + path);
 
-        grunt.file.write(path, replaceConstant(contents, this.data.value, this.data.constant));
+        grunt.file.write(path, replaceConstant(contents,  grunt.template.process(this.data.value), this.data.constant));
     });
 
 };
