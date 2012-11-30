@@ -35,8 +35,9 @@ define('ENV', 'blah');
 to
 
 ```php
-define('ENV', 'staging');
+define('ENV', 'staging-2012-11-30');
 ```
+(Depending on actual date)
 
 ## Installation and Use
 
