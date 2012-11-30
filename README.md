@@ -9,7 +9,8 @@ This is a multi task.
 
 This supports single or double quotes. Heredoc and nowdoc within the `define` are not supported. String constants are
 supported as are numbers, constants, and booleans. The quote marks will be maintained. So you can add quotes to
-transform from and initial number to a string. But, currently, you cannot transform a string to a number, etc.
+transform from and initial number to a string. But, currently, you cannot transform a string to a number, etc. Grunt
+templates are supported in the config `value` field.
 
 ## Usage
 
@@ -19,7 +20,7 @@ Example usage within grunt init:
     setPHPConstant: {
         stage: {
             constant    : 'ENV',
-            value       : 'staging',
+            value       : 'stage-<%= grunt.template.today("yyyy-mm-dd") %>',
             file        : 'temp/myfile.php'
         }
     }
@@ -71,7 +72,7 @@ directory inside the `node_modules` folder of your project.
 
 ### Changelog
 
-* 0.0.10 - 2012 11 29 - Adding grunt templating to value
+* 0.0.11 - 2012 11 29 - Adding grunt templating to value
 
 ---
 
