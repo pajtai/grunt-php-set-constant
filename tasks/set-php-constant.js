@@ -39,11 +39,15 @@ module.exports = function (grunt) {
      */
     grunt.registerMultiTask('setPHPConstant', "Set a PHP constant in a file", function () {
         var path        = this.data.file,
-            contents    = grunt.file.read(path);
+            contents    = grunt.file.read(path),
+            value;
 
         grunt.log.writeln("Searching in file: " + path);
 
-        grunt.file.write(path, replaceConstant(contents,  grunt.template.process(this.data.value), this.data.constant));
+        // Run grunt templating on value if it is a string
+        value = ('string' === typeof this.data.value) ? grunt.template.process(this.data.value) : this.data.value;
+
+        grunt.file.write(path, replaceConstant(contents, value, this.data.constant));
     });
 
 };
