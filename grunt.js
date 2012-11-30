@@ -27,7 +27,12 @@ module.exports = function (grunt) {
                 constant: 'TEST3',
                 value: 'new_constant_value',
                 file: 'test/output/sample.php'
-            }
+            },
+            test4: {
+                constant: 'TEST4',
+                value: '<%= cp.test.dest %>',
+                file: 'test/output/sample.php'
+            }
         }
     };
 

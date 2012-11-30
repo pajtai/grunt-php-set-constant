@@ -63,10 +63,15 @@ directory inside the `node_modules` folder of your project.
 
 * [Peter Ajtai](https://github.com/pajtai)
 * [Eric Beringer](https://github.com/serialworm)
+* [Róbert Oroszi](https://github.com/oroce)
 
 ### TODO:
 
 * use regex back references for quotes
+
+### Changelog
+
+* 0.0.10 - 2012 11 29 - Adding grunt templating to value
 
 ---
 

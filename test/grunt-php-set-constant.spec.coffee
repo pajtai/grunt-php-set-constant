@@ -35,6 +35,10 @@ output = [
   "define(\"TEST3\", new_constant_value);",
   "define (\"TEST3\",new_constant_value);",
   "define (\"TEST3\", new_constant_value);"
+  "define (\"TEST4\", test/output);"
+  "define (\"TEST4\", test/output);"
+  "define (\"TEST4\", \"test/output\");"
+  "define (\"TEST4\", 'test/output');"
 ]
 
 describe "The setting of PHP constants", ->

@@ -34,3 +34,7 @@ define("TEST3",constant_value);   // (Constant) Left double quotes, no space aft
 define("TEST3", constant_value);  // (Constant) Left double quotes, space after comma
 define ("TEST3",constant_value);  // (Constant) Space afer define, left double quotes, no space after comma
 define ("TEST3", constant_value); // (Constant) Space after define, left double quotes, space after comma
+define ("TEST4", constant_value); // template test
+define ("TEST4", 12345); // template test
+define ("TEST4", "test"); // template test
+define ("TEST4", 'test'); // template test
