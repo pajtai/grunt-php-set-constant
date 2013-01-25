@@ -7,21 +7,42 @@ module.exports = function (grunt) {
     var path    = require('path'),
         fs      = require('fs'),
 
+        updateLine = function(oneLine, theEnv, value) {
+            grunt.log.writeln("\nUpdating line:\n" + oneLine);
+            oneLine = theEnv[1] + value + theEnv[2];
+            grunt.log.writeln("\nNew line is:\n" + oneLine);
+            return oneLine;
+        },
+
         replaceConstant = function (body, value, constant) {
 
             // we want to match "define('CONST', 'blah');" with any whitespace and any quote type
             // note that heredoc and now doc are NOT covered
-            var envRegex = new RegExp("(define\\s*\\(\\s*['\"]" + constant + "['\"]\\s*,\\s*['\"]?)[^'\"]+(['\"]?\\s*\\)\\s*;)"),
+
+            // Quote matching possiblities
+            // JS doesn't support look backs, not sure if there is a more elegant solution (maybe with capture groups?)
+            var envRegexSLSR = new RegExp("(define\\s*\\(\\s*[']" + constant + "[']\\s*,\\s*['])[^']*([']\\s*\\)\\s*;)"),
+                envRegexSLDR = new RegExp("(define\\s*\\(\\s*[']" + constant + "[']\\s*,\\s*[\"])[^\"]*([\"]\\s*\\)\\s*;)"),
+                envRegexDLDR = new RegExp("(define\\s*\\(\\s*[\"]" + constant + "[\"]\\s*,\\s*[\"])[^\"]*([\"]\\s*\\)\\s*;)"),
+                envRegexDLSR = new RegExp("(define\\s*\\(\\s*[\"]" + constant + "[\"]\\s*,\\s*['])[^']*([']\\s*\\)\\s*;)"),
+                envRegexSLNR = new RegExp("(define\\s*\\(\\s*[']" + constant + "[']\\s*,\\s*)[^\\s]+(\\s*\\)\\s*;)"),
+                envRegexDLNR = new RegExp("(define\\s*\\(\\s*[\"]" + constant + "[\"]\\s*,\\s*)[^\\s]+(\\s*\\)\\s*;)"),
                 lines = body.replace(/\r\n/g, '\n').split(/\n/),
                 output = [];
 
             lines.forEach(function (oneLine) {
-                var theEnv = envRegex.exec(oneLine);
+                // If a regex matches, that's it, we stop
+
+                var theEnv =    envRegexSLSR.exec(oneLine) ||
+                                envRegexSLDR.exec(oneLine) ||
+                                envRegexDLDR.exec(oneLine) ||
+                                envRegexDLSR.exec(oneLine) ||
+                                envRegexSLNR.exec(oneLine) ||
+                                envRegexDLNR.exec(oneLine);
+
 
                 if (theEnv) {
-                    grunt.log.writeln("\nUpdating line:\n" + oneLine);
-                    oneLine = theEnv[1] + value + theEnv[2];
-                    grunt.log.writeln("\nNew line is:\n" + oneLine);
+                    oneLine = updateLine(oneLine, theEnv, value);
                 }
 
                 output.push(oneLine);

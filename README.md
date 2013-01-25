@@ -12,6 +12,14 @@ supported as are numbers, constants, and booleans. The quote marks will be maint
 transform from and initial number to a string. But, currently, you cannot transform a string to a number, etc. Grunt
 templates are supported in the config `value` field.
 
+You can use one type of quote inside another, but escaping quotes is not supported.
+
+So the following will work:
+
+```php
+define('ENV','other "env"');
+```
+
 ## Usage
 
 Example usage within grunt init:
@@ -73,6 +81,7 @@ directory inside the `node_modules` folder of your project.
 
 ### Changelog
 
+* 0.0.12 - 2013 01 25 - Ability to have an empty string for value. Ability to put one type of quote in another. Issues #1, and #5
 * 0.0.11 - 2012 11 29 - Adding grunt templating to value
 
 ---
