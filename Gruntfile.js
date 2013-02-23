@@ -5,10 +5,11 @@ module.exports = function (grunt) {
 
     var gruntConfig = {
 
-        cp: {
+        copy: {
             test: {
-                src  : 'test/input',
-                dest : 'test/output'
+                files: [
+                    {src  : ['test/input'], dest : 'test/output'}
+                ]
             }
         },
 
@@ -19,18 +20,18 @@ module.exports = function (grunt) {
                 file: 'test/output/sample.php'
             },
             test2: {
-                constant: 'TEST2',
-                value: 67890,
-                file: 'test/output/sample.php'
-            },
-            test3: {
-                constant: 'TEST3',
-                value: 'new_constant_value',
-                file: 'test/output/sample.php'
-            },
+                constant: 'TEST2',
+                value: 67890,
+                file: 'test/output/sample.php'
+            },
+            test3: {
+                constant: 'TEST3',
+                value: 'new_constant_value',
+                file: 'test/output/sample.php'
+            },
             test4: {
                 constant: 'TEST4',
-                value: '<%= cp.test.dest %>',
+                value: '<%= copy.test.files[0].dest %>',
                 file: 'test/output/sample.php'
             }
         }
@@ -38,10 +39,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig(gruntConfig);
 
-    grunt.loadNpmTasks('grunt-cp');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-bump');
 
     grunt.loadTasks('./tasks');
 
-    grunt.registerTask('test', 'cp setPHPConstant');
+    grunt.registerTask('test', ['copy', 'setPHPConstant']);
 };

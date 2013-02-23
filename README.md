@@ -1,6 +1,10 @@
 grunt-php-set-constant
 ======================
 
+## Version 0.0.13+ is Grunt 0.4.0 compatible
+
+### Version 0.0.12- is Grunt 0.3.17 compatible
+
 ## Description
 
 Set a constant in a php file to the value indicated.
@@ -81,6 +85,7 @@ directory inside the `node_modules` folder of your project.
 
 ### Changelog
 
+* 0.0.13 - 2013 02 22 - Adding Grunt 0.4.0 compatibility
 * 0.0.12 - 2013 01 25 - Ability to have an empty string for value. Ability to put one type of quote in another. Issues #1, and #5
 * 0.0.11 - 2012 11 29 - Adding grunt templating to value
 
