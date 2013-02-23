@@ -1,9 +1,16 @@
 grunt-php-set-constant
 ======================
 
-## Version 0.0.13+ is Grunt 0.4.0 compatible
-
-### Version 0.0.12- is Grunt 0.3.17 compatible
+```
++---------------------------------------------+
+|                                             |
+| Current version is Grunt 0.4.0 compatible.  |
+| Version 0.0.13+ is Grunt 0.4.0 compatible.  |
+|                                             |
+| Version 0.0.12 is Grunt 0.3.17 compatible.  |
+|                                             |
++---------------------------------------------+
+```
 
 ## Description
 
