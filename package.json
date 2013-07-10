@@ -2,7 +2,7 @@
   "name": "grunt-php-set-constant",
   "title": "grunt PHP set constant",
   "description": "Set PHP constants to a defined values in PHP files.",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "homepage": "https://github.com/pajtai/grunt-php-set-constant",
   "author": "Peter Ajtai (https://netlumination.com)",
   "repository": {
@@ -24,10 +24,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "jasmine-node": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-bump": ">=0.0.1"
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-jasmine": "~0.1.0",
+    "grunt-bump": "0.0.11"
   },
   "keywords": [
     "gruntplugin"
@@ -36,6 +36,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "grunt test && jasmine-node test --verbose --coffee"
+    "test": "grunt test"
   }
 }
