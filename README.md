@@ -5,11 +5,13 @@ grunt-php-set-constant
 +---------------------------------------------+
 |                                             |
 | Current version is Grunt 0.4.0 compatible.  |
-| Version 0.0.13+ is Grunt 0.4.0 compatible.  |
+| Version 0.0.14+ is Grunt 0.4.0 compatible.  |
 |                                             |
 | Version 0.0.12 is Grunt 0.3.17 compatible.  |
 |                                             |
 +---------------------------------------------+
+
+(version 0.0.13 seems to be missing from npm)
 ```
 
 ## Description
